@@ -130,6 +130,7 @@ void insert_to_ll(free_block_t* free_block)
                 next_block->prev = free_block;
                 free_block->prev = curr_block;
                 free_block->next = next_block;
+                break;
             }
         }
         if(curr_block->next == NULL) {
