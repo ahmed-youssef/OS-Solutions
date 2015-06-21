@@ -123,7 +123,7 @@ void insert_to_ll(free_block_t* free_block)
         free_list_head = free_block;
     } else
     {
-        for(curr_block = free_list_head; curr_block->next != NULL; curr_block = free_block->next) {
+        for(curr_block = free_list_head; curr_block->next != NULL; curr_block = curr_block->next) {
             next_block = curr_block->next;
             if(free_block < next_block) {
                 curr_block->next = free_block;
